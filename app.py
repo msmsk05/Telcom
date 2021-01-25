@@ -86,7 +86,7 @@ randomly_selected=st.checkbox("Churn Probability of Randomly Selected Customers"
 if randomly_selected:
     st.subheader("How many customers to select?")
     st.text("Please select the number of customers")
-    number1=st.selectbox(" ", (1,10,50,100,1000))
+    number1=st.selectbox(" ", (10,50,100,1000))
     if st.button("Analyze"):
         st.info("The analysis of randomly selected {} customers is shown below:".format(number1))
         random_customer()
@@ -106,7 +106,7 @@ churn=st.checkbox("Top Customers to Churn")
 if churn:
     st.subheader("How many customers to select?")
     st.text("Please select the number of customers")
-    number2=st.selectbox(" ", (1,10,50,100,1000))
+    number2=st.selectbox(" ", (10,50,100,1000))
     if st.button("Show"):
         st.warning("Top {} customers to churn".format(number2))
         top_customers()
@@ -125,7 +125,7 @@ loyal=st.checkbox("Top N Loyal Customers")
 if loyal:
     st.subheader("How many customers to select?")
     st.text("Please select the number of customers")
-    number=st.selectbox(" ", (1,10,50,100,1000))
+    number=st.selectbox(" ", (10,50,100,1000))
     if st.button("Display"):
         st.success("Top {} loyal customers".format(number))
         loyal_customers()
